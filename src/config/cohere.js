@@ -9,7 +9,7 @@ const runChat = async (prompt) => {
     const res = await fetch("https://api.cohere.ai/v1/chat", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${API_KEY}`,
+        Authorization: `Bearer ${import.meta.env.VITE_COHERE_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
