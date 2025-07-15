@@ -4,6 +4,8 @@ const API_KEY = "kmGSlr8Amro5PCk7pCS6fhD0nxWkWHVaDfOpxlLc";
 
 const runChat = async (prompt) => {
   try {
+    // Artificial delay for shimmer loader visibility
+    await new Promise(res => setTimeout(res, 1500));
     const res = await fetch("https://api.cohere.ai/v1/chat", {
       method: "POST",
       headers: {

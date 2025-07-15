@@ -3,9 +3,56 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: outfit;
+  font-family: 'Outfit', sans-serif;
 }
 #root{
   min-height: 100vh;
   display: flex;
+}
+
+.app-container {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.main-flex {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 100vh;
+}
+
+@media (max-width: 600px) {
+  .main-flex {
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    padding-bottom: 62px; /* Reserve space for BottomNav */
+  }
+}
+html {
+  font-size: 16px;
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+  body, #root {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
 }
