@@ -1,6 +1,6 @@
 import React from 'react'
 import Sidebar from './Components/main/sidebar/Sidebar'
-import Main from './Components/main/main'
+import Main from './Components/main/Main'
 import BottomNav from './Components/main/sidebar/BottomNav';
 
 const App = () => {
